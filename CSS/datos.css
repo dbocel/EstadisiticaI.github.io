@@ -1,0 +1,312 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
+h1{
+    position: absolute;
+    color: white;
+    margin-left: 6%;
+}
+body{
+    height: 150vh;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url(../IMAGENES/Fondo1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+
+.imgLogo{
+    height: 100px;
+}
+.menu{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    display: flex;
+    margin: 0 40px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.item:hover{
+    color: rgb(0, 174, 255);
+}
+#Menu{
+    display: none;
+    
+}
+.menu-icono{
+    width: 25px;
+}
+label{
+    cursor: pointer;
+    display: none;
+    box-shadow: #ffffff;
+    
+}
+.btn{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 21px;       
+}
+.btn:hover{
+    background-color: rgb(0, 153, 255);
+}
+
+@media(max-width:991px){
+    .menu{
+        position: 30px;
+        margin: 0;
+    }
+    label{
+        display: initial;
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgb(0, 41, 78);
+        display: none;
+        text-align: center;
+        padding: 50px;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .menu_visible{
+        left: 0;
+        
+    }
+
+    .item{
+        margin: 0 0 20px;
+        width: 100%;
+       
+    }
+    .btn{
+        width: 100px;
+        text-align: center;
+        
+    }
+    #Menu:checked ~ .menu{
+        display: initial;
+    }
+    h1{
+        position: absolute;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        align-items: center;
+        margin-left: 180px;
+
+    }
+}
+
+h2{
+    color: #fff;
+    text-shadow: 1px 2px 2px black, 0 0 25px rgb(0, 13, 126), 0 0 5px rgb(8, 0, 121);
+    text-align: center;
+    margin-top: 300px;
+    font-size: 50px; 
+}
+div.Galeria{
+    margin: 20px 50px;
+    box-shadow: 0 4px 8px 0 lightskyblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 350px;
+    margin-left: 10%;
+    cursor: pointer;
+    
+}
+div.Galeria img{
+    width: 100%;
+    height: 250px;
+}
+/*
+div.Galeria:hover{
+    border: 1px solid rgb(38, 0, 143);
+    transform: rotate(-3deg);
+    cursor: pointer;
+}*/
+div.pie{
+    background: #fff;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    
+}
+
+div.pie h4{
+    font-size: 20px;
+}
+
+/*Estilos del pie de pagina*/
+footer {
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    background: #3586ff;
+    padding:20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70%;
+}
+
+footer .social_icon{
+    font-size: 40px;
+    color: #262626;
+    line-height: 60px;
+    transition: 0.5s;
+
+}
+
+footer .social_icon li,
+footer .menu_footer li {
+    list-style: none;}
+
+footer ul{
+    display: flex;
+    gap: 100px;
+}
+
+footer .social_icon li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    text-align: center;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+    transition: 0.5;
+    transition-timing-function: linear;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+      
+}
+
+footer .social_icon li a::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+footer .social_icon li a::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #b1b1b1;
+    transform: rotate(0deg) skewX(-45deg);
+}
+footer .social_icon li a::hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+footer .social_icon li:hover{
+    color: #fff;
+}
+footer .social_icon li:hover a{
+    background: var(--clr0);
+}
+
+footer .social_icon li:hover a::before{
+    background: var(--clr1);
+}
+
+footer .social_icon li:hover a::after{
+    background: var(--clr2);
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px; background:  url(../IMAGENES/wave1.png);
+    background-size: 1000px 100px;
+
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animatewave 3s linear infinite;
+}
+
+
+footer .menu_footer li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+    
+    
+}
+
+footer .menu_footer li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+@keyframes animatewave {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+
+}
+.zoom li a {
+    transition: 1s;
+}
+
+.zoom li a:hover {
+    transform: scale(1.1);
+}
